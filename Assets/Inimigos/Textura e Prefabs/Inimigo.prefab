@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  explosionPrefab: {fileID: 1727428801783071232, guid: 37ecfc96857b8a1498731897fe53b235, type: 3}
+  damageSound: {fileID: 0}
 --- !u!82 &2907707511363765128
 AudioSource:
   m_ObjectHideFlags: 0
