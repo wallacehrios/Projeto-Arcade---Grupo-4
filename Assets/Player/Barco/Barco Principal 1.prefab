@@ -202,7 +202,7 @@ MonoBehaviour:
   fireRate: 0.9
   collectSound: {fileID: 8300000, guid: 52a0b12d0481ea947b18f36893cd7392, type: 3}
   audioMixer: {fileID: -3274521541362423100, guid: 5b2070a8c54cf9345b37d6661f81a40c, type: 2}
-  volumeAudio: 0.5
+  volumeAudio: 0.3
 --- !u!1 &4354109929312730579
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - Bomba
   - Inimigos
   - Barco Controle
+  - Boss
   layers:
   - Default
   - TransparentFX

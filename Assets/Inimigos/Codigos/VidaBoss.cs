@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VidaInimigos : MonoBehaviour
+public class VidaBoss : MonoBehaviour
 {
     public int maxHealth = 100; // O máximo de pontos de vida que o inimigo pode ter
     public int currentHealth; // A quantidade atual de pontos de vida do inimigo
@@ -53,7 +53,7 @@ public class VidaInimigos : MonoBehaviour
     void HandleDeath()
     {
         // Adiciona pontos ao ScoreManager
-        ScoreManager.instance.AddPoint();
+        ScoreManager.instance.BossMorto();
 
         // Instancia o efeito de explosão na posição do inimigo
         GameObject explosionInstance = Instantiate(explosionPrefab, transform.position, transform.rotation);

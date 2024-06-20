@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8691102943984882109}
   - component: {fileID: 2634715592144939077}
   - component: {fileID: 3387517208371494177}
-  - component: {fileID: -1717647065761514464}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Untagged
@@ -149,22 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 34
---- !u!208 &-1717647065761514464
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6245529573265783229}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.79, y: 1.02, z: 0.705}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.24, z: 0}
-  m_TimeToStationary: 0.5
+  explosionPrefab: {fileID: 1727428801783071232, guid: 37ecfc96857b8a1498731897fe53b235, type: 3}
 --- !u!1 &6836457535280819903
 GameObject:
   m_ObjectHideFlags: 0

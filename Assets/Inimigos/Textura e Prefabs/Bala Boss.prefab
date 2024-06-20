@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3190037104760960160}
   - component: {fileID: 8195946321397740509}
   - component: {fileID: 6600441067000555337}
-  - component: {fileID: 1773087532241373026}
   - component: {fileID: -3981163017469326569}
+  - component: {fileID: -609919137484388050}
   - component: {fileID: -3213055438182905072}
   m_Layer: 0
   m_Name: Bala Boss
@@ -86,7 +86,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1773087532241373026
+--- !u!114 &-3981163017469326569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63643067571892618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e12394ce5218541a50bd77a2e440c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 30
+  speed: 200
+--- !u!135 &-609919137484388050
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,23 +121,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-3981163017469326569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63643067571892618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90e12394ce5218541a50bd77a2e440c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 30
-  speed: 200
-  collectSound: {fileID: 8300000, guid: bee19987cd385bc40aa592c86e7a02d9, type: 3}
-  audioMixer: {fileID: -3274521541362423100, guid: 5b2070a8c54cf9345b37d6661f81a40c, type: 2}
-  delayBeforeDisappear: 0.2
 --- !u!54 &-3213055438182905072
 Rigidbody:
   m_ObjectHideFlags: 0

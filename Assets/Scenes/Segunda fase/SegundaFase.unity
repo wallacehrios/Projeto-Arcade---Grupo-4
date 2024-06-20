@@ -521,6 +521,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1637495366370711302, guid: 97c1327dc26a2194faab0ab664de9daf, type: 3}
+      propertyPath: scoreGoal
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2084808498074236855, guid: 97c1327dc26a2194faab0ab664de9daf, type: 3}
       propertyPath: m_IsActive
       value: 0
