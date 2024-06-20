@@ -1,28 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Audio;
 
 public class Mine : MonoBehaviour
 {
     public int damageAmount = 200; // Quantidade de dano que a mina causa
-    public AudioClip collectSound; // Som a ser reproduzido ao coletar o coletável de invencibilidade
-    public float delayBeforeDisappear = 0.5f; // Tempo de espera antes do objeto desaparecer
-    public AudioMixerGroup audioMixer;
+    // M�todo chamado quando um objeto entra na �rea de colis�o da mina
     public GameObject explosionPrefab; // Prefab do efeito de explosão
-
-    private AudioSource audioSource; // Componente de áudio para reproduzir o som
-
-    void Start()
-    {
-        // Adiciona um componente de áudio ao objeto coletável
-        audioSource = gameObject.AddComponent<AudioSource>();
-        // Atribui o som ao componente de áudio
-        audioSource.clip = collectSound;
-        audioSource.outputAudioMixerGroup = audioMixer;
-    }
-
-    // Método chamado quando um objeto entra na área de colisão da mina
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision detected with: " + other.tag);
@@ -46,17 +33,13 @@ public class Mine : MonoBehaviour
             }
 
             // Toca o som de explosão
-            audioSource.Play();
+            AudioManager.instance.audioSource[0].Play();
             // Instancia o efeito de explosão na posição da mina
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Debug.Log("Explosion instantiated");
 
             // Aguarda antes de desativar o objeto
-            Invoke("DeactivateCollectible", delayBeforeDisappear);
+            Destroy(gameObject);
         }
-    }
-    void DeactivateCollectible()
-    {
-        Destroy(gameObject);
     }
 }

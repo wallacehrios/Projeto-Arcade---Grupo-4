@@ -74,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
     private void DeactivateInvincibility()
     {
         isInvincibilityActive = false; // Desativa a invencibilidade
+        AudioManager.instance.audioSource[3].Play();
     }
 }
 
