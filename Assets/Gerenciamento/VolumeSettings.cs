@@ -24,8 +24,8 @@ public class VolumeSettings : MonoBehaviour
     public void VolumeMusica()
     {
         float volume = BarraDeMusica.value;
-        mixer.SetFloat("MusicaMenu", Mathf.Log10(volume)*20);
-        PlayerPrefs.SetFloat("MusicaMenuVolume", volume);
+        mixer.SetFloat("MusicaJogo", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("MusicaJogoVolume", volume);
     }
      public void VolumeJogo()
     {
@@ -35,7 +35,7 @@ public class VolumeSettings : MonoBehaviour
     }
     private void LoadVolume()
     {
-        BarraDeMusica.value = PlayerPrefs.GetFloat("MusicaMenuVolume");
+        BarraDeMusica.value = PlayerPrefs.GetFloat("MusicaJogoVolume");
         VolumeDoJogo.value = PlayerPrefs.GetFloat("JogoVolume");
         VolumeMusica();
         VolumeJogo();

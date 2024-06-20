@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jolly Roger.sln",
+    "dotnet.defaultSolution": "Projeto-Arcade---Grupo-4.sln",
     "git.ignoreLimitWarning": true
 }

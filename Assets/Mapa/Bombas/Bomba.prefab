@@ -149,9 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 34
-  collectSound: {fileID: 8300000, guid: 651c8c2dd2915cb438561c97b1541915, type: 3}
-  delayBeforeDisappear: 1.18
-  audioMixer: {fileID: -3274521541362423100, guid: 5b2070a8c54cf9345b37d6661f81a40c, type: 2}
 --- !u!208 &-1717647065761514464
 NavMeshObstacle:
   m_ObjectHideFlags: 0

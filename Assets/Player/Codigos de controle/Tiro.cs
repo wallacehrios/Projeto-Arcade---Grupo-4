@@ -12,6 +12,7 @@ public class CannonController : MonoBehaviour
     private float nextFireTime; // Tempo para o pr�ximo disparo
     public AudioClip collectSound; // Som a ser reproduzido ao coletar o colet�vel de invencibilidade
     public AudioMixerGroup audioMixer;
+    public float volumeAudio = 1f;
     private AudioSource audioSource;
 
     // M�todo chamado uma vez no in�cio do jogo
@@ -23,6 +24,7 @@ public class CannonController : MonoBehaviour
         // Atribui o som ao componente de �udio
         audioSource.clip = collectSound;
         audioSource.outputAudioMixerGroup = audioMixer;
+        audioSource.volume = volumeAudio;
     }
 
     // M�todo chamado a cada frame

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     int score = 0;
     public int scoreGoal = 5;
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     }
     void Start()
     {
-        scoreText.text = "\n\n\n     " + score.ToString() + " PONTOS";
+        scoreText.text = score.ToString() + " PONTOS";
     }
     void Update()
     {
@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     public void AddPoint(){
         score += 1;
-        scoreText.text = "\n\n\n     " + score.ToString() + " PONTOS";
+        scoreText.text = score.ToString() + " PONTOS";
     }
     public void Lose(){
         UnityEngine.SceneManagement.SceneManager.LoadScene ("LoseScreen");
