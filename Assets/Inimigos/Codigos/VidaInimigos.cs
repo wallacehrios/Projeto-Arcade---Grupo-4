@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class VidaInimigos : MonoBehaviour
@@ -9,6 +10,8 @@ public class VidaInimigos : MonoBehaviour
     public int currentHealth; // A quantidade atual de pontos de vida do inimigo
     public GameObject explosionPrefab; // Prefab do efeito de explosão
     public AudioClip damageSound; // Som a ser reproduzido ao tomar dano
+    public AudioMixerGroup audioMixer;
+    public float volumeAudio = 1f;
     private AudioSource audioSource; // Componente de áudio para reproduzir o som
 
     void Start()
@@ -19,6 +22,8 @@ public class VidaInimigos : MonoBehaviour
         // Adiciona um componente de áudio ao inimigo
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = damageSound;
+        audioSource.outputAudioMixerGroup = audioMixer;
+        audioSource.volume = volumeAudio;
     }
 
     void Update()

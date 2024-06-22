@@ -797,6 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa99d548114d8284eb341cf5240559bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "tempoTransi\xE7\xE3o": 1
 --- !u!1 &8958957396057374116
 GameObject:
   m_ObjectHideFlags: 0

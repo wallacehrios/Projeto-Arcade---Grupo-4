@@ -33,6 +33,15 @@ public class Cannonball : MonoBehaviour
             Destroy(gameObject);
           }
         }
+        if (other.CompareTag("Boss"))
+        {
+          VidaBoss vidaBoss = other.GetComponent<VidaBoss>();
+          if (vidaBoss != null)
+          {
+            vidaBoss.TakeDamage(damage);
+            Destroy(gameObject);
+          }
+        }
      Destroy(gameObject);
     
     }

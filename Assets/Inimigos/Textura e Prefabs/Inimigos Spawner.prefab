@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToCreate: {fileID: 3583239524952925787, guid: b9d8fc7c8283272439775afdb0c6205a, type: 3}
-  minPosition: {x: 3300, y: 0, z: 3300}
-  maxPosition: {x: -3300, y: 0, z: -3300}
-  minRotation: {x: -90, y: 0, z: 0}
-  maxRotation: {x: -90, y: 360, z: 360}
-  quantidade: 22
+  minPosition: {x: 3300, y: 19, z: 3300}
+  maxPosition: {x: -3300, y: 19, z: -3300}
+  minRotation: {x: 0, y: 0, z: 0}
+  maxRotation: {x: 0, y: 360, z: 0}
+  quantidade: 27

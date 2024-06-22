@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 7879738856619963623}
   - component: {fileID: 5281873170558648520}
   - component: {fileID: 6963238626208938888}
-  - component: {fileID: 438882523599925537}
   m_Layer: 0
   m_Name: Barco Principal 1
   m_TagString: Barco Controle
@@ -203,20 +202,7 @@ MonoBehaviour:
   fireRate: 0.9
   collectSound: {fileID: 8300000, guid: 52a0b12d0481ea947b18f36893cd7392, type: 3}
   audioMixer: {fileID: -3274521541362423100, guid: 5b2070a8c54cf9345b37d6661f81a40c, type: 2}
---- !u!114 &438882523599925537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2505545823584666462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34d7ae94ede95e409e726d3d64d6367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invincibilityPointCount: 0
-  invincibilityDuration: 5
+  volumeAudio: 0.3
 --- !u!1 &4354109929312730579
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +396,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2524243544472786961, guid: ca7ae0842b6438a49a4998aa3ec0f710, type: 3}
       insertIndex: 3
       addedObject: {fileID: 7783175846501015759}
+    - targetCorrespondingSourceObject: {fileID: 2524243544472786961, guid: ca7ae0842b6438a49a4998aa3ec0f710, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6855008333027696987}
   m_SourcePrefab: {fileID: 100100000, guid: ca7ae0842b6438a49a4998aa3ec0f710, type: 3}
 --- !u!4 &2349548103720190990 stripped
 Transform:
@@ -441,6 +430,20 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   barraDeVida: {fileID: 0}
+--- !u!114 &6855008333027696987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250434250424171643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d7ae94ede95e409e726d3d64d6367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityPointCount: 0
+  invincibilityDuration: 5
 --- !u!4 &6770546833984317121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2903760239837823659, guid: ca7ae0842b6438a49a4998aa3ec0f710, type: 3}

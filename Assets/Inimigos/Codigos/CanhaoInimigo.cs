@@ -7,17 +7,9 @@ public class CanhaoInimigo : MonoBehaviour
 {
     public int damageAmount = 20;
     public float speed = 30f;
-    public AudioClip collectSound; // Som a ser reproduzido ao coletar o colet�vel de invencibilidade
-    public AudioMixerGroup audioMixer;
-    private AudioSource audioSource;
-    public float delayBeforeDisappear = 0.5f;
     void Start ()
     {
         GetComponent<Rigidbody>().velocity = transform.forward * speed;
-        audioSource = gameObject.AddComponent<AudioSource>();
-        // Atribui o som ao componente de �udio
-        audioSource.clip = collectSound;
-        audioSource.outputAudioMixerGroup = audioMixer;
     }
     void OnTriggerEnter(Collider other)
     {
@@ -31,14 +23,10 @@ public class CanhaoInimigo : MonoBehaviour
           {
             // Reduz a sa�de do jogador pelo valor de dano da mina
             playerHealth.TakeDamage(damageAmount);
-            audioSource.Play();
-            Invoke("DeactivateCollectible", delayBeforeDisappear);
+            AudioManager.instance.audioSource[2].Play();
+            Destroy(gameObject);
           }
         }
       
-    }
-    void DeactivateCollectible()
-    {
-        Destroy(gameObject);
     }
 }

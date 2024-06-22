@@ -5,11 +5,19 @@ public class InvincibilityController : MonoBehaviour
     public int invincibilityPointCount = 0; // Contagem de pontos de invencibilidade
     private bool isInvincible = false; // Indica se o jogador est� atualmente invenc�vel
     public float invincibilityDuration = 5f; // Dura��o da invencibilidade em segundos
+    void Update()
+    {
+        
+    }
 
     // M�todo para coletar um ponto de invencibilidade
     public void CollectInvincibilityPoint()
     {
-        invincibilityPointCount++; // Incrementa a contagem de pontos
+        if (invincibilityPointCount < 3)
+        {
+            invincibilityPointCount++;
+            Bolhas.instance.bolhas[invincibilityPointCount].SetActive(true);
+        }
     }
 
     // M�todo para usar um ponto de invencibilidade
@@ -18,6 +26,7 @@ public class InvincibilityController : MonoBehaviour
         // Verifica se h� pontos de invencibilidade dispon�veis para uso
         if (invincibilityPointCount > 0)
         {
+            Bolhas.instance.bolhas[invincibilityPointCount].SetActive(false);
             invincibilityPointCount--; // Decrementa a contagem de pontos
             ActivateInvincibility(); // Ativa a invencibilidade
             return true; // Indica que um ponto foi usado com sucesso
